@@ -1,0 +1,23 @@
+{% extends 'main.html' %} {%block head%}{%endblock head%} {%block body%}
+<h1>home template file</h1>
+<div>
+  <div>
+    <a href="{% url 'create-user' %}">create user</a> {%for user in users%}
+    <div>
+      <span>@{{user.Fname}}</span>
+      <h5>{{user.UserId}}-- <a href="{% url 'user' user.UserId %}">{{user.Fname}}</a></h5><br>
+      <a href="{% url 'update-user' user.UserId %}">Edit {{user.Fname}}</a>
+      <a href="{% url 'delete-user' user.UserId %}"> Delete {{user.Fname}}</a>
+      <hr />
+    </div>
+    {%endfor%}
+  </div>
+  <a href="{% url 'Display-invertor' %}">display invertor</a> <br>
+  <a href="{% url 'Display-vehicle' %}">display vehicle</a> <br>
+  <a href="{% url 'Display-motor' %}">display motor</a> <br>
+  <a href="{% url 'Display-review' %}">display review</a> <br>
+  <a href="{% url 'Display-battery' %}">display battery</a> <br>
+  <a href="{% url 'Display-structure' %}">display structure</a> <br>
+  <a href="{% url 'Display-billingDetails' %}">display billingDetails</a> <br>  
+  
+{%endblock body%}

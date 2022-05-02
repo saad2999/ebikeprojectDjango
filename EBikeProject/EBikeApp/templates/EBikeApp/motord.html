@@ -1,0 +1,62 @@
+{% extends 'main.html' %} {%block head%}
+<style>
+    
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          th, td {
+            padding: 15px;
+          }
+          
+    
+</style>
+{%endblock head%} 
+{%block body%}
+    
+{%for motor in motors%}
+    <div>
+      <table>
+          <tr>
+            <th>motorID</th>
+            <th>motorTYPE</th>
+            <th>placement</th>
+            <th>Wattage</th>
+            <th>volts</th>
+            <th>manufacturer</th>
+            
+          </tr>
+          <tr>
+            <td>{{motor.motorID}}</td>
+            <td>{{motor.motorTYPE}}</td>
+            <td>{{motor.placement}}</td>
+            <td>{{motor.Wattage}}</td>
+            <td>{{motor.volts}}</td>
+            <td>{{motor.manufacturer}}</td>
+            
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+      </table>
+      </div>
+
+     
+
+    
+
+
+
+  
+     
+    
+    
+{%endfor%}
+  
+
+{% endblock body%}

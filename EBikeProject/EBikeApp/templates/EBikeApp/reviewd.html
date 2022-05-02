@@ -1,0 +1,58 @@
+{% extends 'main.html' %} {%block head%}
+<style>
+    
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          th, td {
+            padding: 15px;
+          }
+          
+    
+</style>
+{%endblock head%} 
+{%block body%}
+    
+{%for review in reviews%}
+    <div>
+      <table>
+          <tr>
+            <th>reviewNO</th>
+            <th>reviewTEXT</th>
+            <th>userID</th>
+            <th>vehicleID</th>
+            
+          </tr>
+          <tr>
+            <td>{{review.reviewNO}}</td>
+            <td>{{review.reviewTEXT}}</td>
+            <td>{{review.userID}}</td>
+            <td>{{review.vehicleID}}</td>
+            
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+      </table>
+      </div>
+
+     
+
+    
+
+
+
+  
+     
+    
+    
+{%endfor%}
+  
+
+{% endblock body%}

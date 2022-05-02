@@ -1,0 +1,57 @@
+{% extends 'main.html' %} {%block head%}
+<style>
+    
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          th, td {
+            padding: 15px;
+          }
+          
+    
+</style>
+{%endblock head%} 
+{%block body%}
+    
+    {%for battery in batteries%}
+    <div>
+      <table>
+          <tr>
+            <th>batteryID</th>
+            <th>batteryTYPE</th>
+            <th>volts</th>
+            <th>Watthour</th>
+            <th>lifetime</th>
+          </tr>
+          <tr>
+            <td>{{battery.batteryID}}</td>
+            <td>{{battery.batteryTYPE}}</td>
+            <td>{{battery.volts}}</td>
+            <td>{{battery.Watthour}}</td>
+            <td>{{battery.lifetime}}</td>
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+      </table>
+      </div>
+
+     
+
+    
+
+
+
+  
+     
+    
+    
+    {%endfor%}
+  
+{% endblock body%}

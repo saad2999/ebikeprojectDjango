@@ -1,0 +1,63 @@
+{% extends 'main.html' %} {%block head%}
+<style>
+    
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          th, td {
+            padding: 15px;
+          }
+          
+    
+</style>
+{%endblock head%} 
+{%block body%}
+    
+{%for billingDetails in billingDetailss%}
+    <div>
+      <table>
+          <tr>
+            <th>detailno</th>
+            <th>userID</th>
+            <th>address</th>
+            <th>country</th>
+            <th>zip</th>
+            <th>CCno</th>
+            <th>promocode</th>
+          </tr>
+          <tr>
+            <td>{{billingDetails.detailno}}</td>
+            <td>{{billingDetails.userID}}</td>
+            <td>{{billingDetails.address}}</td>
+            <td>{{billingDetails.country}}</td>
+            <td>{{billingDetails.zip}}</td>
+            <td>{{billingDetails.CCno}}</td>
+            <td>{{billingDetails.promocode}}</td>
+            
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+      </table>
+      </div>
+
+     
+
+    
+
+
+
+  
+     
+    
+    
+{%endfor%}
+  
+
+{% endblock body%}

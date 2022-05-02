@@ -1,0 +1,11 @@
+{% extends 'main.html' %} {%block head%}{%endblock head%} {%block body%}
+<h1>{{user.Fname}}</h1>
+<a href="{% url 'add-battery' %}">add-battery</a> <br>
+<a href="{% url 'add-review' %}">add-review</a> <br>
+<a href="{% url 'add-motor' %}">add-motor</a> <br>
+<a href="{% url 'add-inverter' %}">add-inverter</a><br> 
+<a href="{% url 'add-structure' %}">add-structure</a> <br>
+<a href="{% url 'add-vehicle' %}">add-vehicle</a> <br>
+<a href="{% url 'add-billingDetails' %}">add-billingDetails</a> <br><br>
+
+{%endblock body%}

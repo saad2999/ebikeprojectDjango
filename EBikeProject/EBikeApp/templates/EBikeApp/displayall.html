@@ -1,0 +1,55 @@
+{% extends 'main.html' %} {%block head%}
+<style>
+    
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          th, td {
+            padding: 15px;
+          }
+          
+    
+</style>
+{%endblock head%} 
+{%block body%}
+    {%for inverter in inverters%}
+    <div>
+    <table>
+        <tr>
+          <th>inverterID</th>
+          <th>Wattage</th>
+          <th>volts</th>
+        </tr>
+        <tr>
+          <td>{{inverter.inverterID}}</td>
+          <td>{{inverter.Wattage}}</td>
+          <td> {{inverter.volts}}</td>
+          <td>edit</td>
+          <td>delete</td>
+        </tr>
+    </table>
+    </div>
+
+
+
+      
+
+    
+
+
+
+  
+     
+    
+    
+{%endfor%}
+  
+
+{% endblock body%}

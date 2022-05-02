@@ -1,0 +1,77 @@
+{% extends 'main.html' %} {%block head%}
+<style>
+    
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          th, td {
+            padding: 15px;
+          }
+          
+    
+</style>
+{%endblock head%} 
+{%block body%}
+    
+    {%for vehicle in vehicles%}
+    <div>
+      <table>
+          <tr>
+            <th>user</th>
+            <th>battery</th>
+            <th>motor</th>
+            <th>inverter</th>
+            <th>structure</th>
+            <th>vehicleTYPE</th>
+            <th>weightKG</th>
+            <th>OrderDATE</th>
+            <th>warrantyDATE</th>
+            <th>tyre</th>
+            <th>helmet</th>
+            <th>pedal</th>
+            <th>meter</th>
+            
+          </tr>
+
+          <tr>
+            <td>{{vehicle.user}}</td>
+            <td>{{vehicle.battery}}</td>
+            <td>{{vehicle.motor}}</td>
+            <td>{{vehicle.inverter}}</td>
+            <td>{{vehicle.structure}}</td>
+            <td>{{vehicle.vehicleTYPE}}</td>
+            <td>{{vehicle.weightKG}}</td>
+            <td>{{vehicle.OrderDATE}}</td>
+            <td>{{vehicle.warrantyDATE}}</td>
+            <td>{{vehicle.tyre}}</td>
+            <td>{{vehicle.helmet}}</td>
+            <td>{{vehicle.pedal}}</td>
+            <td>{{vehicle.meter}}</td>
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+      </table>
+      </div>
+
+     
+     
+
+    
+
+
+
+  
+     
+    
+    
+{%endfor%}
+  
+
+{% endblock body%}
